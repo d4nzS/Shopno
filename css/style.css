@@ -49,3 +49,56 @@
     right: 247px;
     top: 590px;
 }
+
+.section__content {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 197px 15px 0;
+}
+.section__title {
+    color: #323333;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.section__subtitle {
+    color: #646565;
+    font-family: Merriweather, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.section_about-us {
+    background: #f8fafa;
+}
+.section_featured-works {
+    background: #ffffff;
+}
+.section_featured-works .section__subtitle {
+    padding-bottom: 120px;
+}
+.section_small-team {
+    background: #f9fbfb;
+}
+.section_small-team .section__subtitle {
+    padding-bottom: 120px;
+}
+.section .section__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 15px;
+}
+.section_form {
+    background-image: url("../images/bg-section.png");
+}

@@ -56,3 +56,73 @@
     top: 590px;
   }
 }
+
+.section {
+  &__content {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 197px 15px 0;
+  }
+
+  &__title {
+    color: #323333;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__subtitle {
+    color: #646565;
+    font-family: Merriweather, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &_about-us {
+    background: #f8fafa;
+  }
+
+  &_featured-works {
+    background: #ffffff;
+
+    .section__subtitle {
+      padding-bottom: 120px;
+    }
+  }
+
+  &_small-team {
+    background: #f9fbfb;
+
+    .section__subtitle {
+      padding-bottom: 120px;
+    }
+  }
+
+    .section__block, {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+  &_form{
+    background-image: url("../images/bg-section.png");
+  }
+
+
+
+
+
+
+
+
+
+
+
+}
