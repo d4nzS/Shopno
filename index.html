@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ShopNo</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Raleway&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -94,28 +94,30 @@
     <section class="section section_form">
         <div class="section__body">
             <form action="" class="section__form form" method="GET">
-                <label for="name" class="form__label-name">Name</label>
-                <input type="text" name="name" class="form__input-name" id="name">
+                <label for="name" class="form__label">Name</label>
+                <input type="text" name="name" class="form__input" id="name">
 
-                <label for="subject" class="form__label-subject">Subject</label>
-                <input type="text" name="subject" class="form__input-subject" id="subject">
+                <label for="subject" class="form__label">Subject</label><br>
+                <input type="text" name="subject" class="form__input" id="subject">
 
-                <label for="email" class="form__label-email">E-mail</label>
-                <input type="email" name="email" class="form__input-email;" id="email">
+                <label for="email" class="form__label">E-mail</label>
+                <input type="email" name="email" class="form__input" id="email">
 
-                <label for="message" class="form__label-message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" class="form__textarea-message"></textarea>
+                <label for="message" class="form__label">Message</label>
+                <textarea name="message" id="message" class="form__input form__input_textarea"></textarea>
 
                 <button type="submit" class="form__button">SEND MESSAGE</button>
             </form>
 
-            <div class="section__addresses">
-                <p class="section__addresses__info">Adress line 1</p>
-                <p class="section__addresses__info">Adress line 2</p>
-                <p class="section__addresses__info">Phone: +548 945645
-                <p class="section__addresses__info">Fax: +456456 54546
-                <p class="section__addresses__info">Web: www.designagency.net</p>
-                <p class="section__addresses__info">E-mail: info@designagency.net</p>
+            <div class="section__info-addresses info-addresses">
+                <p>
+                    Adress line 1<br>
+                    Adress line 2<br>
+                    Phone: +548 945645<br>
+                    Fax: +456456 54546<br><br>
+                    Web: www.designagency.net<br>
+                    E-mail: info@designagency.net
+                </p>
             </div>
         </div>
     </section>
@@ -123,6 +125,7 @@
 
 <footer class="footer">
     <h1 class="footer__title">FOLLOW US</h1>
+
     <nav class="footer__contacts">
         <a href=""></a><a href=""></a><a href=""></a><a href=""></a>
     </nav>
