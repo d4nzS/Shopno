@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Myriad Pro";
+  src: local("Roboto"),
+  url("../fonts/MyriadPro.otf") format("woff");
+}
+
 * {
   border: none;
   padding: 0;
@@ -20,15 +26,6 @@
     position: relative;
   }
 
-  &__logo {
-    color: #000;
-    font-size: 17px;
-    font-weight: bold;
-    border: 5px solid #000;
-    width: 113px;
-    padding: 5px 5px;
-  }
-
   &__title {
     margin: 193px 0 5px;
 
@@ -46,8 +43,8 @@
     color: #777879;
     letter-spacing: 0.2em;
     text-decoration: none;
-    transition: background-color 0.3s linear,
-    color 0.3s linear;
+    transition: background-color 0.4s linear,
+    color 0.4s linear;
 
     &:hover {
       background: #777879;
@@ -62,10 +59,25 @@
   }
 }
 
+.logo {
+  color: #000;
+  font-size: 17px;
+  font-weight: bold;
+  border: 5px solid #000;
+  width: 113px;
+  padding: 5px 5px;
+
+  &__selection {
+    color: #77efe5;
+    font-size: 21px;
+  }
+}
+
 .header .title {
   color: #505050;
   font-size: 45px;
   font-weight: bold;
+  text-shadow: 3px 3px 3px #d9d3d3;
 
   &__text {
     background: #a7e3df;
@@ -152,19 +164,81 @@
 
 
 
-
-
-
   &__image {
-    background-image: url("../images/2nd-person.jpg");
+    position: relative;
     height: 440px;
     width: 370px;
-    padding: 25px;
+  }
+
+  @for $i from 1 to 6 {
+    &__image_#{$i} {
+      background-image: url("../images/#{$i}-person.jpg");
+    }
+  }
+
+  &__info-comment {
+    height: 280px;
+    width: 363px;
+    padding: 62px 56px 54px 56px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    }
+}
+
+.info-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../images/team-info.png");
+  opacity: 0;
+  transition: opacity 0.4s linear;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  .title {
+    font-size: 20px;
+    font-family: Merriweather, sans-serif;
+    line-height: 16px;
+
+    &__selection {
+      font-family: "Myriad Pro", sans-serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #767070;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-family: Raleway, sans-serif;
+    color: #214946;
+    line-height: 24px;
+
+
   }
 }
 
+.nav-person {
+  &__item {
+    display: inline-block;
+    margin-right: 16px;
+    color: #214946;
+    transition: 0.4s color;
 
-.article{
+    &:hover {
+      color: #8831ea;
+    }
+  }
+}
+
+.article {
   &__title {
     margin: 25px 0 20px;
     font-family: Merriweather, serif;
@@ -214,8 +288,8 @@
     font-size: 18px;
     color: #505050;
     letter-spacing: 0.1em;
-    transition: background-color 0.3s linear,
-    color 0.3s linear;
+    transition: background-color 0.4s linear,
+    color 0.4s linear;
     cursor: pointer;
 
     &:hover {
@@ -257,7 +331,8 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    transition: background-color 0.3s linear;
+    transition: background-color 0.4s linear,
+    color 0.4s linear;
     color: #bbb8b9;
     font-size: 24px;
 
@@ -267,7 +342,3 @@
     }
   }
 }
-
-
-
-

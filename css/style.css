@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Myriad Pro";
+    src: local("Roboto"), url("../fonts/MyriadPro.otf") format("woff");
+}
 * {
     border: none;
     padding: 0;
@@ -20,14 +24,6 @@
     padding: 64px 15px 195px;
     position: relative;
 }
-.header__logo {
-    color: #000;
-    font-size: 17px;
-    font-weight: bold;
-    border: 5px solid #000;
-    width: 113px;
-    padding: 5px 5px;
-}
 .header__title {
     margin: 193px 0 5px;
 }
@@ -42,8 +38,8 @@
     color: #777879;
     letter-spacing: 0.2em;
     text-decoration: none;
-    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
-    transition: background-color 0.3s linear, color 0.3s linear;
+    -webkit-transition: background-color 0.4s linear, color 0.4s linear;
+    transition: background-color 0.4s linear, color 0.4s linear;
 }
 .header__link:hover {
     background: #777879;
@@ -55,10 +51,24 @@
     bottom: 130px;
 }
 
+.logo {
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+    border: 5px solid #000;
+    width: 113px;
+    padding: 5px 5px;
+}
+.logo__selection {
+    color: #77efe5;
+    font-size: 21px;
+}
+
 .header .title {
     color: #505050;
     font-size: 45px;
     font-weight: bold;
+    text-shadow: 3px 3px 3px #d9d3d3;
 }
 .header .title__text {
     background: #a7e3df;
@@ -138,10 +148,83 @@
             flex: 0 1 442px;
 }
 .section__image {
-    background-image: url("../images/2nd-person.jpg");
+    position: relative;
     height: 440px;
     width: 370px;
-    padding: 25px;
+}
+.section__image_1 {
+    background-image: url("../images/1-person.jpg");
+}
+.section__image_2 {
+    background-image: url("../images/2-person.jpg");
+}
+.section__image_3 {
+    background-image: url("../images/3-person.jpg");
+}
+.section__image_4 {
+    background-image: url("../images/4-person.jpg");
+}
+.section__image_5 {
+    background-image: url("../images/5-person.jpg");
+}
+.section__info-comment {
+    height: 280px;
+    width: 363px;
+    padding: 62px 56px 54px 56px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.info-comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-image: url("../images/team-info.png");
+    opacity: 0;
+    -webkit-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear;
+}
+.info-comment:hover {
+    opacity: 1;
+}
+.info-comment__title {
+    margin-bottom: 25px;
+}
+.info-comment .title {
+    font-size: 20px;
+    font-family: Merriweather, sans-serif;
+    line-height: 16px;
+}
+.info-comment .title__selection {
+    font-family: "Myriad Pro", sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #767070;
+}
+.info-comment__text {
+    font-size: 16px;
+    font-family: Raleway, sans-serif;
+    color: #214946;
+    line-height: 24px;
+}
+
+.nav-person__item {
+    display: inline-block;
+    margin-right: 16px;
+    color: #214946;
+    -webkit-transition: 0.4s color;
+    transition: 0.4s color;
+}
+.nav-person__item:hover {
+    color: #8831ea;
 }
 
 .article__title {
@@ -190,8 +273,8 @@
     font-size: 18px;
     color: #505050;
     letter-spacing: 0.1em;
-    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
-    transition: background-color 0.3s linear, color 0.3s linear;
+    -webkit-transition: background-color 0.4s linear, color 0.4s linear;
+    transition: background-color 0.4s linear, color 0.4s linear;
     cursor: pointer;
 }
 .form__button:hover {
@@ -237,8 +320,8 @@
         -ms-flex-align: center;
             align-items: center;
     text-decoration: none;
-    -webkit-transition: background-color 0.3s linear;
-    transition: background-color 0.3s linear;
+    -webkit-transition: background-color 0.4s linear, color 0.4s linear;
+    transition: background-color 0.4s linear, color 0.4s linear;
     color: #bbb8b9;
     font-size: 24px;
 }
