@@ -10,7 +10,7 @@
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
 
-  &__content {
+  &__body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 64px 15px 195px;
@@ -27,17 +27,11 @@
 
   &__title {
     margin: 193px 0 5px;
-    color: #505050;
-    font-size: 45px;
-    font-weight: bold;
 
     &_second {
       margin: 0 0 139px;
     }
 
-    &__selection {
-      background: #a7e3df;
-    }
   }
 
   &__link {
@@ -47,7 +41,6 @@
     color: #777879;
     letter-spacing: 0.2em;
     text-decoration: none;
-
   }
 
   &__icon {
@@ -57,14 +50,49 @@
   }
 }
 
-.section {
-  &__content {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 197px 15px 0;
+.header .title {
+  color: #505050;
+  font-size: 45px;
+  font-weight: bold;
+
+  &__text {
+    background: #a7e3df;
   }
 
-  &__title {
+}
+
+.section {
+  &_about-us {
+    background: #f8fafa;
+
+      .section__content {
+        justify-content: space-around;
+      }
+  }
+
+  &_featured-works {
+    background: #ffffff;
+  }
+
+  &_small-team {
+    background: #f9fbfb;
+  }
+
+  //&_form{
+  //  background-image: url("../images/bg-section.png");
+  //}
+
+  &__body {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 197px 15px 125px;
+  }
+  
+  &__subtitle {
+    margin-bottom: 125px;
+  }
+
+  .title {
     color: #323333;
     font-family: Montserrat, sans-serif;
     font-weight: bold;
@@ -74,9 +102,9 @@
     letter-spacing: 0.05em;
   }
 
-  &__subtitle {
+  .subtitle {
     color: #646565;
-    font-family: Merriweather, sans-serif;
+    font-family: Merriweather, serif;
     font-weight: normal;
     font-size: 18px;
     text-align: center;
@@ -84,45 +112,37 @@
     letter-spacing: 0.05em;
   }
 
-  &_about-us {
-    background: #f8fafa;
+  &__content, {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
 
-  &_featured-works {
-    background: #ffffff;
-
-    .section__subtitle {
-      padding-bottom: 120px;
-    }
+  &__article {
+    flex: 0 1 442px;
   }
-
-  &_small-team {
-    background: #f9fbfb;
-
-    .section__subtitle {
-      padding-bottom: 120px;
-    }
-  }
-
-    .section__block, {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-  &_form{
-    background-image: url("../images/bg-section.png");
-  }
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+.article{
+  &__title {
+    margin: 25px 0 20px;
+    font-family: Merriweather, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #646565;
+    word-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    font-family: Raleway, sans-serif;
+    font-size: 16px;
+    color: #646565;
+    line-height: 28px;
+  }
+}
+
+
+
