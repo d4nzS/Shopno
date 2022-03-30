@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ShopNo</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Raleway&display=swap"
           rel="stylesheet">
@@ -18,7 +19,7 @@
         <h1 class="header__title header__title_second"><span class="title__text">Agency </span>CORPORATE
             SHOPNO Theme</h1>
 
-        <a href="#" class="header__link">CONTACT US</a>
+        <a href="#contacts" class="header__link">CONTACT US</a>
 
         <img src="images/juice-glass.png" alt="" class="header__icon">
 
@@ -82,7 +83,7 @@
 
             <div class="section__content">
                 <img src="images/1st-person.jpg" alt="">
-                <img src="images/2nd-person.jpg" alt="">
+                <div class="section__image"></div>
                 <img src="images/3rd-person.jpg" alt="">
                 <img src="images/4th-person.jpg" alt="">
                 <img src="images/5th-person.jpg" alt="">
@@ -91,20 +92,20 @@
         </div>
     </section>
 
-    <section class="section section_form">
+    <section class="section section_form" id="contacts">
         <div class="section__body">
             <form action="" class="section__form form" method="GET">
                 <label for="name" class="form__label">Name</label>
-                <input type="text" name="name" class="form__input" id="name">
+                <input type="text" name="name" class="form__input" id="name" placeholder="Name">
 
                 <label for="subject" class="form__label">Subject</label><br>
-                <input type="text" name="subject" class="form__input" id="subject">
+                <input type="text" name="subject" class="form__input" id="subject" placeholder="Subject">
 
                 <label for="email" class="form__label">E-mail</label>
-                <input type="email" name="email" class="form__input" id="email">
+                <input type="email" name="email" class="form__input" id="email" placeholder="E-mail">
 
                 <label for="message" class="form__label">Message</label>
-                <textarea name="message" id="message" class="form__input form__input_textarea"></textarea>
+                <textarea name="message" id="message" class="form__input form__input_textarea" placeholder="Message"></textarea>
 
                 <button type="submit" class="form__button">SEND MESSAGE</button>
             </form>
@@ -118,6 +119,8 @@
                     Web: www.designagency.net<br>
                     E-mail: info@designagency.net
                 </p>
+
+<!--                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d0f459bd85760e5f3550c411c8bfb4809fd82a71a5fae134607482b88103466&amp;width=460&amp;height=240&amp;lang=en_FR&amp;scroll=true"></script>-->
             </div>
         </div>
     </section>
@@ -126,9 +129,15 @@
 <footer class="footer">
     <h1 class="footer__title">FOLLOW US</h1>
 
-    <nav class="footer__contacts">
-        <a href=""></a><a href=""></a><a href=""></a><a href=""></a>
+    <nav class="footer__nav nav">
+        <a href="" class="nav__item"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="" class="nav__item"><i class="fa-brands fa-twitter"></i></a>
+        <a href="" class="nav__item"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="" class="nav__item"><i class="fa-brands fa-dribbble"></i></a>
     </nav>
 </footer>
+
+<script src="https://kit.fontawesome.com/aa5b7fdc19.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

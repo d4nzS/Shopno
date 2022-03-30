@@ -17,6 +17,7 @@
     max-width: 1170px;
     margin: 0 auto;
     padding: 64px 15px 195px;
+    position: relative;
   }
 
   &__logo {
@@ -38,18 +39,26 @@
   }
 
   &__link {
+    display: inline-block;
     padding: 15px 45px;
     border: solid #777879 3px;
     font-size: 18px;
     color: #777879;
     letter-spacing: 0.2em;
     text-decoration: none;
+    transition: background-color 0.3s linear,
+    color 0.3s linear;
+
+    &:hover {
+      background: #777879;
+      color: #eff0f2;
+    }
   }
 
   &__icon {
     position: absolute;
-    right: 247px;
-    top: 590px;
+    right: 8.5%;
+    bottom: 130px;
   }
 }
 
@@ -137,6 +146,21 @@
   &__article {
     flex: 0 1 442px;
   }
+
+
+
+
+
+
+
+
+
+  &__image {
+    background-image: url("../images/2nd-person.jpg");
+    height: 440px;
+    width: 370px;
+    padding: 25px;
+  }
 }
 
 
@@ -162,7 +186,11 @@
 .form {
   background: rgba(70, 90, 99, 0.71);
   padding: 40px 30px;
-  flex: 1 1 auto;
+  flex: 5 1 0;
+
+  &__label {
+    cursor: pointer;
+  }
 
   &__input {
     display: block;
@@ -170,6 +198,7 @@
     margin-bottom: 25px;
     background: rgba(0, 0, 0, 0);
     border-bottom: #c4c7ca 1px solid;
+    font-family: Raleway, sans-serif;
 
     &_textarea {
       height: 95px;
@@ -185,26 +214,60 @@
     font-size: 18px;
     color: #505050;
     letter-spacing: 0.1em;
+    transition: background-color 0.3s linear,
+    color 0.3s linear;
+    cursor: pointer;
+
+    &:hover {
+      background: #505050;
+      color: #6eeee4;
+    }
   }
 }
 
 .info-addresses {
   background: rgba(70, 90, 99, 0.71);
   padding: 30px 20px 25px;
-  flex: 1 1 auto;
   line-height: 24px;
+  flex: 4 1 0;
 }
 
 .footer {
   background: #262b2e;
   text-transform: uppercase;
   font-family: Raleway, sans-serif;
-  font-size: 16px;
   color: #fff;
   text-align: center;
   padding: 95px 0 150px;
   margin: 0 auto;
+
+  &__title {
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
+
+.nav {
+  &__item {
+    margin: 20px 4px;
+    display: inline-flex;
+    background: #424648;
+    height: 40px;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s linear;
+    color: #bbb8b9;
+    font-size: 24px;
+
+    &:hover {
+      background: #6eeee4;
+      color: #262b2e;
+    }
+  }
+}
+
 
 
 
