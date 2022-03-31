@@ -16,7 +16,7 @@
         </div>
 
         <h1 class="header__title title">Say Hello to <span class="title__text">SHOPNO!</span></h1>
-        <h1 class="header__title header__title_second title"><span class="title__text">Agency </span>CORPORATE
+        <h1 class="header__title header__title_second title"><span class="title__text">Agency</span> CORPORATE
             SHOPNO Theme</h1>
 
         <a href="#contacts" class="header__link">CONTACT US</a>
@@ -33,7 +33,7 @@
             <h2 class="section__subtitle subtitle">Lorem ipsum dolor sit amet event landing template</h2>
 
             <div class="section__content">
-                <img src="images/about-us.png" alt="ABOUT US" height="533" width="442">
+                <img src="images/about-us.png" alt="ABOUT US" class="section__image-about-us">
 
                 <article class="section__article article">
                     <h1 class="article__title">We Actually Do amazing works</h1>
@@ -66,12 +66,12 @@
             <h2 class="section__subtitle subtitle">Lorem ipsum dolor sit amet event landing template</h2>
 
             <div class="section__content">
-                <img src="images/1st-work.png" alt="">
-                <img src="images/2nd-work.png" alt="">
-                <img src="images/3rd-work.png" alt="">
-                <img src="images/4th-work.png" alt="">
-                <img src="images/5th-work.png" alt="">
-                <img src="images/6th-work.png" alt="">
+                <img src="images/1-work.png" alt="" class="section__image-work">
+                <img src="images/2-work.png" alt="" class="section__image-work">
+                <img src="images/3-work.png" alt="" class="section__image-work">
+                <img src="images/4-work.png" alt="" class="section__image-work">
+                <img src="images/5-work.png" alt="" class="section__image-work">
+                <img src="images/6-work.png" alt="" class="section__image-work">
             </div>
         </div>
     </section>
@@ -82,7 +82,7 @@
             <h2 class="section__subtitle subtitle">Lorem ipsum dolor sit amet event landing template</h2>
 
             <div class="section__content">
-                <div class="section__image section__image_1">
+                <div class="section__image-worker section__image-worker_1">
                     <div class="section__info-comment info-comment">
                         <h1 class="section__info-comment__title title">
                             MASHA ROSTOVA
@@ -90,7 +90,7 @@
                         </h1>
 
                         <p class="info-comment__text">
-                            Lorem Ipsum is not simply is  an action designer random text<br>
+                            Lorem Ipsum is not simply is an action designer random text<br>
                             It has roots in a piece.
                         </p>
 
@@ -103,7 +103,7 @@
                     </div>
                 </div>
 
-                <div class="section__image section__image_2">
+                <div class="section__image-worker section__image-worker_2">
                     <div class="section__info-comment info-comment">
                         <h1 class="section__info-comment__title title">
                             AL RAYHAN
@@ -111,7 +111,7 @@
                         </h1>
 
                         <p class="info-comment__text">
-                            Lorem Ipsum is not simply is  an action designer random text<br>
+                            Lorem Ipsum is not simply is an action designer random text<br>
                             It has roots in a piece.
                         </p>
 
@@ -123,7 +123,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="section__image section__image_3">
+                <div class="section__image-worker section__image-worker_3">
                     <div class="section__info-comment info-comment">
                         <h1 class="section__info-comment__title title">
                             Jeffry Header
@@ -131,7 +131,7 @@
                         </h1>
 
                         <p class="info-comment__text">
-                            Lorem Ipsum is not simply is  an action designer random text<br>
+                            Lorem Ipsum is not simply is an action designer random text<br>
                             It has roots in a piece.
                         </p>
 
@@ -144,7 +144,7 @@
                     </div>
                 </div>
 
-                <div class="section__image section__image_4">
+                <div class="section__image-worker section__image-worker_4">
                     <div class="section__info-comment info-comment">
                         <h1 class="section__info-comment__title title">
                             Vue Honor
@@ -152,7 +152,7 @@
                         </h1>
 
                         <p class="info-comment__text">
-                            Lorem Ipsum is not simply is  an action designer random text<br>
+                            Lorem Ipsum is not simply is an action designer random text<br>
                             It has roots in a piece.
                         </p>
 
@@ -165,7 +165,7 @@
                     </div>
                 </div>
 
-                <div class="section__image section__image_5">
+                <div class="section__image-worker section__image-worker_5">
                     <div class="section__info-comment info-comment">
                         <h1 class="section__info-comment__title title">
                             Robert Ulans
@@ -173,7 +173,7 @@
                         </h1>
 
                         <p class="info-comment__text">
-                            Lorem Ipsum is not simply is  an action designer random text<br>
+                            Lorem Ipsum is not simply is an action designer random text<br>
                             It has roots in a piece.
                         </p>
 
@@ -186,7 +186,7 @@
                     </div>
                 </div>
 
-                <div class="section__image section__image_1">
+                <div class="section__image-worker section__image-worker_1">
                     <div class="section__info-comment info-comment">
                         <h1 class="section__info-comment__title title">
                             MASHA ROSTOVA
@@ -194,7 +194,7 @@
                         </h1>
 
                         <p class="info-comment__text">
-                            Lorem Ipsum is not simply is  an action designer random text<br>
+                            Lorem Ipsum is not simply is an action designer random text<br>
                             It has roots in a piece.
                         </p>
 
@@ -211,35 +211,37 @@
     </section>
 
     <section class="section section_form" id="contacts">
-        <div class="section__body">
-            <form action="" class="section__form form" method="GET">
-                <label for="name" class="form__label">Name</label>
-                <input type="text" name="name" class="form__input" id="name" placeholder="Name">
+        <div class="section__bg-container">
+            <div class="section__body">
+                <form action="" class="section__form form" method="GET">
+                    <label for="name" class="form__label">Name</label>
+                    <input type="text" name="name" class="form__input" id="name" placeholder="Name">
 
-                <label for="subject" class="form__label">Subject</label><br>
-                <input type="text" name="subject" class="form__input" id="subject" placeholder="Subject">
+                    <label for="subject" class="form__label">Subject</label><br>
+                    <input type="text" name="subject" class="form__input" id="subject" placeholder="Subject">
 
-                <label for="email" class="form__label">E-mail</label>
-                <input type="email" name="email" class="form__input" id="email" placeholder="E-mail">
+                    <label for="email" class="form__label">E-mail</label>
+                    <input type="email" name="email" class="form__input" id="email" placeholder="E-mail">
 
-                <label for="message" class="form__label">Message</label>
-                <textarea name="message" id="message" class="form__input form__input_textarea" placeholder="Message"></textarea>
+                    <label for="message" class="form__label">Message</label>
+                    <textarea name="message" id="message" class="form__input form__input_textarea"
+                              placeholder="Message"></textarea>
 
-                <button type="submit" class="form__button">SEND MESSAGE</button>
-            </form>
+                    <button type="submit" class="form__button">SEND MESSAGE</button>
+                </form>
 
-            <div class="section__info-addresses info-addresses">
-                <p>
-                    Address line 1<br>
-                    Address line 2<br>
-                    Phone: +548 945645<br>
-                    Fax: +456456 54546<br>
-                    <br>
-                    Web: www.designagency.net<br>
-                    E-mail: info@designagency.net
-                </p>
-
-<!--                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d0f459bd85760e5f3550c411c8bfb4809fd82a71a5fae134607482b88103466&amp;width=460&amp;height=240&amp;lang=en_FR&amp;scroll=true"></script>-->
+                <div class="section__info-addresses info-addresses">
+                    <p>
+                        Address line 1<br>
+                        Address line 2<br>
+                        Phone: +548 945645<br>
+                        Fax: +456456 54546<br>
+                        <br>
+                        Web: www.designagency.net<br>
+                        E-mail: info@designagency.net
+                    </p>
+                    <!--                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A50ce0b88fc7e3c06153d4c3cbcfa63d9642aa3d3454c454989042e576907912c&amp;width=100%&amp;height=225&amp;lang=en_FR&amp;scroll=true"></script>-->
+                </div>
             </div>
         </div>
     </section>

@@ -69,8 +69,11 @@
     font-size: 45px;
     font-weight: bold;
     text-shadow: 3px 3px 3px #d9d3d3;
+    letter-spacing: 0.05em;
 }
 .header .title__text {
+    padding-left: 15px;
+    padding-right: 10px;
     background: #a7e3df;
 }
 
@@ -147,36 +150,42 @@
         -ms-flex: 0 1 442px;
             flex: 0 1 442px;
 }
-.section__image {
+.section__bg-container {
+    background-image: url("../images/bg-trees.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section__image-worker {
+    background-size: contain;
     position: relative;
     height: 440px;
     width: 370px;
 }
-.section__image_1 {
+.section__image-worker_1 {
     background-image: url("../images/1-person.jpg");
 }
-.section__image_2 {
+.section__image-worker_2 {
     background-image: url("../images/2-person.jpg");
 }
-.section__image_3 {
+.section__image-worker_3 {
     background-image: url("../images/3-person.jpg");
 }
-.section__image_4 {
+.section__image-worker_4 {
     background-image: url("../images/4-person.jpg");
 }
-.section__image_5 {
+.section__image-worker_5 {
     background-image: url("../images/5-person.jpg");
 }
 .section__info-comment {
-    height: 280px;
-    width: 363px;
-    padding: 62px 56px 54px 56px;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    height: 260px;
+    left: 4%;
+    bottom: 4%;
+    right: 4%;
 }
 
 .info-comment {
+    padding: 55px 35px 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -218,6 +227,7 @@
 
 .nav-person__item {
     display: inline-block;
+    font-size: 13px;
     margin-right: 16px;
     color: #214946;
     -webkit-transition: 0.4s color;
@@ -244,7 +254,7 @@
 }
 
 .form {
-    background: rgba(70, 90, 99, 0.71);
+    background: rgba(38, 43, 46, 0.71);
     padding: 40px 30px;
     -webkit-box-flex: 5;
         -ms-flex: 5 1 0px;
@@ -263,6 +273,21 @@
 }
 .form__input_textarea {
     height: 95px;
+}
+.form__input::-webkit-input-placeholder {
+    color: black;
+}
+.form__input::-moz-placeholder {
+    color: black;
+}
+.form__input:-ms-input-placeholder {
+    color: black;
+}
+.form__input::-ms-input-placeholder {
+    color: black;
+}
+.form__input::placeholder {
+    color: black;
 }
 .form__button {
     background: #6eeee4;
@@ -283,7 +308,7 @@
 }
 
 .info-addresses {
-    background: rgba(70, 90, 99, 0.71);
+    background: rgba(38, 43, 46, 0.71);
     padding: 30px 20px 25px;
     line-height: 24px;
     -webkit-box-flex: 4;
@@ -328,4 +353,81 @@
 .nav__item:hover {
     background: #6eeee4;
     color: #262b2e;
+}
+
+@media (max-width: 925px) {
+    .section__body {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .section__subtitle {
+        margin-bottom: 50px;
+    }
+    .section_about-us .section__content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .article {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+    }
+
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 800px) {
+    .header__icon {
+        bottom: 100px;
+    }
+
+    .section__body {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .section__subtitle {
+        margin-bottom: 30px;
+    }
+    .section_form .section__body {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 460px) {
+    .section__image-about-us {
+        width: 300px;
+        height: 362px;
+    }
+}
+@media (max-width: 400px) {
+    .header__body {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .header__logo {
+        margin-left: 15px;
+    }
+
+    .section__image-work {
+        width: 290px;
+    }
+    .section__image-worker {
+        height: 344px;
+        width: 290px;
+    }
 }
