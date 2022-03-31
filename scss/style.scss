@@ -13,25 +13,29 @@
   resize: none;
 }
 
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 .header {
   background: #eff0f2;
   text-align: center;
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
 
-  &__body {
-    max-width: 1170px;
-    margin: 0 auto;
+  &__container {
     padding: 64px 15px 195px;
     position: relative;
   }
 
-  &__title {
-    margin: 193px 0 5px;
+  &__logo {
+    display: block;
+    margin: 0;
+  }
 
-    &_second {
-      margin: 0 0 139px;
-    }
+  &__title {
+    margin: 193px 0 139px;
   }
 
   &__link {
@@ -58,20 +62,6 @@
   }
 }
 
-.logo {
-  color: #000;
-  font-size: 17px;
-  font-weight: bold;
-  border: 5px solid #000;
-  width: 113px;
-  padding: 5px 5px;
-
-  &__selection {
-    color: #77efe5;
-    font-size: 21px;
-  }
-}
-
 .header .title {
   color: #505050;
   font-size: 45px;
@@ -79,12 +69,11 @@
   text-shadow: 3px 3px 3px #d9d3d3;
   letter-spacing: 0.05em;
 
-  &__text {
+  &__span {
     padding-left: 15px;
     padding-right: 10px;
     background: #a7e3df;
   }
-
 }
 
 .section {
@@ -111,17 +100,13 @@
     color: #c4c7ca;
     font-weight: 100;
 
-    .section__body {
+    .section__container {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
       gap: 25px;
     }
   }
 
-  &__body {
-    max-width: 1170px;
-    margin: 0 auto;
+  &__container {
     padding: 197px 15px 125px;
   }
 
@@ -149,7 +134,7 @@
     letter-spacing: 0.05em;
   }
 
-  &__content, {
+  &__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -310,6 +295,9 @@
   padding: 30px 20px 25px;
   line-height: 24px;
   flex: 4 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer {
@@ -351,7 +339,8 @@
 
 @media (max-width: 925px) {
   .section {
-    &__body {
+
+    &__container {
       padding-top: 50px;
       padding-bottom: 50px;
     }
@@ -386,7 +375,7 @@
   }
 
   .section {
-    &__body {
+    &__container {
       padding-top: 30px;
       padding-bottom: 30px;
     }
@@ -396,7 +385,7 @@
     }
 
     &_form {
-      .section__body {
+      .section__container {
         flex-direction: column;
       }
     }
@@ -419,7 +408,7 @@
 
 @media (max-width: 400px) {
   .header {
-    &__body {
+    &__container {
       padding-right: 0;
       padding-left: 0;
     }
