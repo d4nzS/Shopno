@@ -80,10 +80,10 @@
   &_about-us {
     background: #f8fafa;
 
-      .section__content {
-        justify-content: space-around;
-        gap: 0;
-      }
+    .section__content {
+      justify-content: space-around;
+      gap: 0;
+    }
   }
 
   &_featured-works {
@@ -95,6 +95,12 @@
   }
 
   &_form {
+    background-image: url("../images/bg-trees.png");
+    background-size: cover;
+    background-position: center;
+
+
+
     font-family: Raleway, sans-serif;
     font-size: 15px;
     color: #c4c7ca;
@@ -145,14 +151,9 @@
     flex: 0 1 442px;
   }
 
-  &__bg-container {
-    background-image: url("../images/bg-trees.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   &__image-worker {
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     position: relative;
     height: 440px;
     width: 370px;
@@ -170,7 +171,18 @@
     left: 4%;
     bottom: 4%;
     right: 4%;
+  }
+
+  &__block {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+
+    &:hover {
+      opacity: 1;
     }
+  }
 }
 
 .info-comment {
@@ -179,12 +191,6 @@
   flex-direction: column;
   justify-content: space-between;
   background-image: url("../images/team-info.png");
-  opacity: 0;
-  transition: opacity 0.4s linear;
-
-  &:hover {
-    opacity: 1;
-  }
 
   &__title {
     margin-bottom: 25px;
@@ -351,8 +357,8 @@
 
     &_about-us {
       .section__content {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
@@ -427,6 +433,5 @@
       height: 344px;
       width: 290px;
     }
-
   }
 }
