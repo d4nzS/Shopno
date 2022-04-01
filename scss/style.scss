@@ -66,7 +66,7 @@
   color: #505050;
   font-size: 45px;
   font-weight: bold;
-  text-shadow: 3px 3px 3px #d9d3d3;
+  text-shadow: 0 9px 10px rgba(0, 0, 0, 0.24);
   letter-spacing: 0.05em;
 
   &__span {
@@ -145,6 +145,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+  }
+
+  &__image-about-us {
+    box-shadow: 0 0 30px 0 rgba(20, 20, 21, 0.13);
   }
 
   &__article {
@@ -376,7 +380,7 @@
 @media (max-width: 800px) {
   .header {
     &__icon {
-      bottom: 100px;
+      display: none;
     }
   }
 

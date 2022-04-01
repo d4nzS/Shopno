@@ -59,7 +59,7 @@
     color: #505050;
     font-size: 45px;
     font-weight: bold;
-    text-shadow: 3px 3px 3px #d9d3d3;
+    text-shadow: 0 9px 10px rgba(0, 0, 0, 0.24);
     letter-spacing: 0.05em;
 }
 .header .title__span {
@@ -131,6 +131,10 @@
         -ms-flex-pack: center;
             justify-content: center;
     gap: 15px;
+}
+.section__image-about-us {
+    -webkit-box-shadow: 0 0 30px 0 rgba(20, 20, 21, 0.13);
+            box-shadow: 0 0 30px 0 rgba(20, 20, 21, 0.13);
 }
 .section__article {
     -webkit-box-flex: 0;
@@ -383,7 +387,7 @@
 }
 @media (max-width: 800px) {
     .header__icon {
-        bottom: 100px;
+        display: none;
     }
 
     .section__container {
