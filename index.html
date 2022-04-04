@@ -16,8 +16,8 @@
         <img src="images/logo.png" alt="ShopNo-logo" class="header__logo">
 
         <div class="header__title title">
-            Say Hello to <span class="title__span">SHOPNO!</span><br>
-            <span class="title__span">Agency</span> CORPORATE SHOPNO Theme
+            Say Hello to<span class="title__span">SHOPNO!</span><br>
+            <span class="title__span" style="padding-right: 0;">Agency </span>CORPORATE SHOPNO Theme
         </div>
 
         <a href="#contacts" class="header__link">CONTACT US</a>
@@ -49,7 +49,7 @@
                         instrument flight rules.
                     </p>
 
-                    <h1 class="article__title">Why we are the great?</h1>
+                    <h1 class="article__title"><span class="article__selection">Why we are the great?</span></h1>
 
                     <p class="article__info">
                         A visual approach is an approach to a runway at an airport
@@ -66,38 +66,19 @@
             <h1 class="section__title title">FEATURED WORKS</h1>
             <h2 class="section__subtitle subtitle">Lorem ipsum dolor sit amet event landing template</h2>
 
-            <div class="section__content works__cards">
-                <img data-modal-target="#modal" src="images/1-work.png" alt="Work" class="section__image-work">
-                <div class="modal" id="modal">
-                    <img src="images/1-work.png" alt="Work" class="section__image-work_active">
+            <div class="section__content">
+                <img src="images/1-work.png" alt="Work" class="open-popup-button section__image-work">
+                <img src="images/2-work.png" alt="Work" class="open-popup-button section__image-work">
+                <img src="images/3-work.png" alt="Work" class="open-popup-button section__image-work">
+                <img src="images/4-work.png" alt="Work" class="open-popup-button section__image-work">
+                <img src="images/5-work.png" alt="Work" class="open-popup-button section__image-work">
+                <img src="images/6-work.png" alt="Work" class="open-popup-button section__image-work">
+
+                <div class="popup">
+                    <img src="#" alt="Work" class="popup__image">
                 </div>
 
-                <img data-modal-target="#modal" src="images/2-work.png" alt="Work" class="section__image-work">
-                <div class="modal" id="modal">
-                    <img src="images/2-work.png" alt="Work" class="section__image-work_active">
-                </div>
-
-                <img data-modal-target="#modal" src="images/3-work.png" alt="Work" class="section__image-work">
-                <div class="modal" id="modal">
-                    <img src="images/3-work.png" alt="Work" class="section__image-work_active">
-                </div>
-
-                <img data-modal-target="#modal" src="images/4-work.png" alt="Work" class="section__image-work">
-                <div class="modal" id="modal">
-                    <img src="images/4-work.png" alt="Work" class="section__image-work_active">
-                </div>
-
-                <img data-modal-target="#modal" src="images/5-work.png" alt="Work" class="section__image-work">
-                <div class="modal" id="modal">
-                    <img src="images/5-work.png" alt="Work" class="section__image-work_active">
-                </div>
-
-                <img data-modal-target="#modal" src="images/6-work.png" alt="Work" class="section__image-work">
-                <div class="modal" id="modal">
-                    <img src="images/6-work.png" alt="Work" class="section__image-work_active">
-                </div>
-
-                <div id="overlay"></div>
+                <script src="js/script.js"></script>
             </div>
         </div>
     </section>
@@ -223,7 +204,7 @@
                     </div>
                 </div>
 
-                <div class="section__image-worker section__image-worker_1">
+                <div class="section__image-worker section__image-worker_6">
                     <div class="section__block">
                         <div class="section__info-comment info-comment">
                             <h1 class="section__info-comment__title title">
@@ -254,33 +235,34 @@
             <div class="container section__container">
                 <form action="" class="section__form form" method="GET">
                     <label for="name" class="form__label">Name</label>
-                    <input type="text" name="name" class="form__input" id="name" placeholder="Name">
+                    <input type="text" name="name" class="form__input" id="name">
 
                     <label for="subject" class="form__label">Subject</label><br>
-                    <input type="text" name="subject" class="form__input" id="subject" placeholder="Subject">
+                    <input type="text" name="subject" class="form__input" id="subject">
 
                     <label for="email" class="form__label">E-mail</label>
-                    <input type="email" name="email" class="form__input" id="email" placeholder="E-mail">
+                    <input type="email" name="email" class="form__input" id="email">
 
                     <label for="message" class="form__label">Message</label>
-                    <textarea name="message" id="message" class="form__input form__input_textarea"
-                              placeholder="Message"></textarea>
+                    <textarea name="message" id="message" class="form__input form__input_textarea"></textarea>
 
                     <button type="submit" class="form__button">SEND MESSAGE</button>
                 </form>
 
                 <div class="section__info-addresses info-addresses">
-                    <p>
-                        Address line 1<br>
-                        Address line 2<br>
-                        Phone: +548 945645<br>
-                        Fax: +456456 54546
-                    </p>
+                    <div class="info-addresses__items">
+                        <p>
+                            Address line 1<br>
+                            Address line 2<br>
+                            Phone: +548 945645<br>
+                            Fax: +456456 54546<br><br>
+                        </p>
 
-                    <p>
-                        Web: www.designagency.net<br>
-                        E-mail: info@designagency.net
-                    </p>
+                        <p>
+                            Web: www.designagency.net<br>
+                            E-mail: info@designagency.net
+                        </p>
+                    </div>
 
                     <script type="text/javascript" charset="utf-8" async
                             src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A50ce0b88fc7e3c06153d4c3cbcfa63d9642aa3d3454c454989042e576907912c&amp;width=100%&amp;height=225&amp;lang=en_FR&amp;scroll=true"></script>

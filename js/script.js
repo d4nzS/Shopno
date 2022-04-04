@@ -1,39 +1,27 @@
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
+"use strict";
 
-openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
-    })
-})
+const popup = document.querySelector(".popup");
+const openPopupButton = document.querySelectorAll(".open-popup-button");
+const popupImage = document.querySelector(".popup__image");
 
-overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
-    modals.forEach(modal => {
-        closeModal(modal)
-    })
-})
+for (let i = 0; i < openPopupButton.length; i++) {
+    openPopupButton[i].addEventListener("click", function () {
+        const src = openPopupButton[i].getAttribute("src");
 
-closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
-    })
-})
-
-function openModal(modal) {
-    if (modal == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
+        popup.classList.add("popup_active");
+        popupImage.setAttribute("src", src);
+    });
 }
 
-function closeModal(modal) {
-    if (modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
+for (let i = 0; i < openPopupButton.length; i++) {
+    popup.addEventListener("click", function () {
+        openPopupButton[i].classList.remove("open-popup-button_active");
+        popup.classList.remove("popup_active");
+    })
 }
+
+
+
 
 
 
