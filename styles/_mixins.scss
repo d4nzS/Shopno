@@ -1,0 +1,30 @@
+@mixin styledTitle($fontSize) {
+  color: #646565;
+  font-family: Merriweather, serif;
+  font-size: $fontSize;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  word-spacing: -2px;
+  text-transform: uppercase;
+}
+
+@mixin flexContent {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+@mixin styledInput {
+  margin-bottom: 25px;
+  border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  font-family: Raleway, sans-serif;
+}
+
+@mixin flexMediaContent {
+  flex-direction: column;
+  gap: 25px;
+}

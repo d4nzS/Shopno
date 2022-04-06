@@ -1,0 +1,475 @@
+@import 'vars';
+@import 'mixins';
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 115px 15px 0;
+  margin: 0 auto;
+}
+
+.header {
+  background: $bgColorHeader;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__container {
+    padding-top: 64px;
+    padding-bottom: 195px;
+    position: relative;
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &__title {
+    margin: 193px 0 139px;
+    color: #505050;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    text-shadow: 0 9px 10px rgba(0, 0, 0, 0.24);
+  }
+
+  &__span {
+    padding-left: 15px;
+    padding-right: 10px;
+    background: #a7e3df;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 13px 45px;
+    border: solid $colorHeaderButton 2px;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.749);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: background-color 0.4s linear,
+    color 0.4s linear;
+
+    &:hover {
+      background: $colorHeaderButton;
+      color: $bgColorHeader;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 8.5%;
+    bottom: 112px;
+  }
+}
+
+.title {
+  color: #323333;
+  font-family: Montserrat, sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: $colorText;
+  font-family: Merriweather, serif;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  word-spacing: 2.1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+}
+
+.about-us {
+  background: #f8fafa;
+
+  &__container {
+    padding-bottom: 165px;
+  }
+
+  &__subtitle {
+    margin-bottom: 144px;
+  }
+
+  &__content {
+    justify-content: space-around;
+  }
+
+  &__image {
+    text-align: center;
+    width: 392px;
+    box-shadow: 0 0 30px 0 rgba(20, 20, 21, 0.13);
+  }
+
+  &__article {
+    flex: 0 1 480px;
+  }
+
+  &__text-title {
+    margin-bottom: 19px;
+    @include styledTitle($fontSize: 20px);
+  }
+
+  &__text-subtitle {
+    margin-top: 28px;
+    margin-bottom: 15px;
+    @include styledTitle($fontSize: 17px);
+  }
+
+  &__text {
+    color: $colorText;
+    font-family: Raleway, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.75;
+  }
+}
+
+.featured-works {
+  background: #ffffff;
+
+  &__container {
+    padding-bottom: 95px;
+  }
+
+  &__subtitle {
+    margin-bottom: 125px;
+  }
+
+  &__content {
+    @include flexContent;
+  }
+}
+
+.small-team {
+  background: #f9fbfb;
+
+  &__container {
+    padding-bottom: 192px;
+  }
+
+  &__subtitle {
+    margin-bottom: 116px;
+  }
+
+  &__content {
+    @include flexContent;
+  }
+
+  &__worker {
+    position: relative;
+    height: 440px;
+    width: 370px;
+    background-size: cover;
+    background-position: center center;
+
+    &_1st {
+      background-image: url("../images/1st-person.jpg");
+    }
+
+    &_2nd {
+      background-image: url("../images/2nd-person.jpg");
+    }
+
+    &_3rd {
+      background-image: url("../images/3rd-person.jpg");
+    }
+
+    @for $i from 4 to 7 {
+      &_#{$i}th {
+        background-image: url("../images/#{$i}th-person.jpg");
+      }
+    }
+  }
+
+  &__info-container {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    height: (260 / 440 * 100%);
+    left: (18 / 370 * 100%);
+    bottom: (12 / 370 * 100%);
+    right: (18 / 370 * 100%);
+    padding: (69 / 370 * 100%) (36 / 370 * 100%) (40 / 370 * 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../images/team-info.png");
+  }
+
+  &__title {
+    margin-bottom: -15px;
+    font-family: Merriweather, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 10px;
+    letter-spacing: 2px;
+  }
+
+  &__span {
+    color: #767070;
+    font-size: 15px;
+    font-style: italic;
+    text-transform: none;
+  }
+
+  &__text {
+    color: #214946;
+    font-size: 16px;
+    font-family: Raleway, sans-serif;
+    line-height: 24px;
+  }
+
+  &__link {
+    margin-right: 10px;
+    display: inline-block;
+    color: #214946;
+    font-size: 13px;
+    transition: 0.4s color;
+
+    &:hover {
+      color: #8831ea;
+    }
+  }
+}
+
+.contacts {
+  background-image: url("../images/bg-trees.png");
+  background-size: cover;
+  background-position: center center;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+
+  &__container {
+    padding-bottom: 116px;
+  }
+
+  &__content {
+    justify-content: space-between;
+  }
+
+  &__form {
+    padding: 45px 32px 37px;
+    width: (613 / 1140 * 100%);
+    background: $bgContactsItem;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    @include styledInput;
+  }
+
+  &__textarea {
+    @include styledInput;
+    height: 90px;
+  }
+
+  &__button {
+    margin-top: 40px;
+    padding: 15px 35px;
+    border-radius: 2px;
+    display: block;
+    background: $colorButton;
+    color: rgba(0, 0, 0, 0.702);
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color 0.4s linear,
+    color 0.4s linear;
+    cursor: pointer;
+
+    &:hover {
+      background: #505050;
+      color: $colorButton;
+    }
+  }
+
+  &__info {
+    padding: 32px 22px 20px;
+    background: $bgContactsItem;
+    width: (501 / 1140 * 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 24px;
+  }
+
+  &__text {
+    padding-left: 10px;
+  }
+}
+
+.footer {
+  background: $bgColorFooter;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  color: #fff;
+  text-align: center;
+
+  &__container {
+    padding: 90px 0 136px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  &__link {
+    margin: 15px 2px;
+    height: 40px;
+    width: 45px;
+    background: #424648;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #bbb8b9;
+    text-decoration: none;
+    transition: background-color 0.4s linear,
+    color 0.4s linear;
+
+    &:hover {
+      background: $colorButton;
+      color: $bgColorFooter;
+    }
+  }
+}
+
+.open-popup-image {
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  pointer-events: none;
+
+  &_active {
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    min-width: 280px;
+    max-height: 700px;
+    min-height: 280px;
+    width: 95vmin;
+    height: 95vmin;
+  }
+}
+
+@media (max-width: 925px) {
+  .container {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
+
+  .header {
+    &__title {
+      margin-top: 20vw;
+      margin-bottom: 20vw;
+    }
+
+    &__image {
+      display: none;
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 10vw;
+  }
+
+  .about-us__content {
+    @include flexMediaContent;
+    align-items: center;
+  }
+
+  .contacts {
+    &__content {
+      @include flexMediaContent;
+    }
+
+    &__form, &__info {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .header__title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-us__image, .open-popup-image, .small-team__worker {
+    width: 290px;
+  }
+
+  .small-team {
+    &__worker {
+      height: (440px * 290 / 370);
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+
+    &__span {
+      font-size: (15px * 0.75);
+    }
+
+    &__text {
+      font-size: (16px * 0.75);
+      line-height: (24px * 0.75);
+    }
+  }
+}
