@@ -7,6 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Raleway&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <script defer src="https://kit.fontawesome.com/aa5b7fdc19.js" crossorigin="anonymous"></script>
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=14a44f83-c794-4d4a-8ac3-7b051ad75370&lang=en_US"></script>
+    <script defer src="scripts/ymap.js"></script>
+    <script defer src="scripts/script.js"></script>
 </head>
 <body>
 <header class="header">
@@ -74,8 +78,6 @@
                 <div class="popup">
                     <img src="#" alt="Work" class="popup__image">
                 </div>
-
-                <script src="scripts/script.js"></script>
             </div>
         </div>
     </section>
@@ -257,8 +259,7 @@
                         E-mail: info@designagency.net
                     </div>
 
-                    <script type="text/javascript" charset="utf-8" async
-                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A50ce0b88fc7e3c06153d4c3cbcfa63d9642aa3d3454c454989042e576907912c&amp;width=100%&amp;height=225&amp;lang=en_FR&amp;scroll=true"></script>
+                    <div id="map" style="width: 100%; height: 225px"></div>
                 </div>
             </div>
         </div>
@@ -277,9 +278,6 @@
         </nav>
     </div>
 </footer>
-
-<script src="https://kit.fontawesome.com/aa5b7fdc19.js" crossorigin="anonymous"></script>
-
 </body>
 </html>
 
