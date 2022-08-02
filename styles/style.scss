@@ -1,5 +1,5 @@
-@import 'vars';
-@import 'mixins';
+@use 'vars' as v;
+@use 'mixins' as m;
 
 * {
   padding: 0;
@@ -17,7 +17,7 @@
 }
 
 .header {
-  background: $bgColorHeader;
+  background: v.$bgColorHeader;
   font-family: Montserrat, sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -51,7 +51,7 @@
   &__link {
     display: inline-block;
     padding: 13px 45px;
-    border: solid $colorHeaderButton 2px;
+    border: solid v.$colorHeaderButton 2px;
     border-radius: 2px;
     color: rgba(0, 0, 0, 0.749);
     font-size: 18px;
@@ -62,8 +62,8 @@
     color 0.4s linear;
 
     &:hover {
-      background: $colorHeaderButton;
-      color: $bgColorHeader;
+      background: v.$colorHeaderButton;
+      color: v.$bgColorHeader;
     }
   }
 
@@ -85,7 +85,7 @@
 }
 
 .subtitle {
-  color: $colorText;
+  color: v.$colorText;
   font-family: Merriweather, serif;
   font-size: 18px;
   font-weight: normal;
@@ -126,17 +126,17 @@
 
   &__text-title {
     margin-bottom: 19px;
-    @include styledTitle($fontSize: 20px);
+    @include m.styledTitle($fontSize: 20px);
   }
 
   &__text-subtitle {
     margin-top: 28px;
     margin-bottom: 15px;
-    @include styledTitle($fontSize: 17px);
+    @include m.styledTitle($fontSize: 17px);
   }
 
   &__text {
-    color: $colorText;
+    color: v.$colorText;
     font-family: Raleway, sans-serif;
     font-size: 16px;
     letter-spacing: 0.8px;
@@ -156,7 +156,7 @@
   }
 
   &__content {
-    @include flexContent;
+    @include m.flexContent;
   }
 }
 
@@ -172,7 +172,7 @@
   }
 
   &__content {
-    @include flexContent;
+    @include m.flexContent;
   }
 
   &__worker {
@@ -281,7 +281,7 @@
   &__form {
     padding: 45px 32px 37px;
     width: (613 / 1140 * 100%);
-    background: $bgContactsItem;
+    background: v.$bgContactsItem;
   }
 
   &__label {
@@ -289,11 +289,11 @@
   }
 
   &__input {
-    @include styledInput;
+    @include m.styledInput;
   }
 
   &__textarea {
-    @include styledInput;
+    @include m.styledInput;
     height: 90px;
   }
 
@@ -302,7 +302,7 @@
     padding: 15px 35px;
     border-radius: 2px;
     display: block;
-    background: $colorButton;
+    background: v.$colorButton;
     color: rgba(0, 0, 0, 0.702);
     font-family: Montserrat, sans-serif;
     font-size: 18px;
@@ -314,13 +314,13 @@
 
     &:hover {
       background: #505050;
-      color: $colorButton;
+      color: v.$colorButton;
     }
   }
 
   &__info {
     padding: 32px 22px 20px;
-    background: $bgContactsItem;
+    background: v.$bgContactsItem;
     width: (501 / 1140 * 100%);
     display: flex;
     flex-direction: column;
@@ -334,7 +334,7 @@
 }
 
 .footer {
-  background: $bgColorFooter;
+  background: v.$bgColorFooter;
   text-transform: uppercase;
   font-family: Raleway, sans-serif;
   color: #fff;
@@ -364,8 +364,8 @@
     color 0.4s linear;
 
     &:hover {
-      background: $colorButton;
-      color: $bgColorFooter;
+      background: v.$colorButton;
+      color: v.$bgColorFooter;
     }
   }
 }
@@ -428,13 +428,13 @@
   }
 
   .about-us__content {
-    @include flexMediaContent;
+    @include m.flexMediaContent;
     align-items: center;
   }
 
   .contacts {
     &__content {
-      @include flexMediaContent;
+      @include m.flexMediaContent;
     }
 
     &__form, &__info {
